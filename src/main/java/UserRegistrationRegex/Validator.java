@@ -18,4 +18,8 @@ public class Validator {
     public static boolean validateMobile(String mobile) {
         return Pattern.matches(Regex.MOBILE_PATTERN, mobile); // validates mobile number
     }
+
+    public static boolean validatePassword(String password) {
+        return Pattern.matches(Regex.PASSWORD_PATTERN, password);
+    }
 }
