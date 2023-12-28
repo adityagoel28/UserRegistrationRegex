@@ -10,4 +10,8 @@ public class Validator {
     public static boolean validateLastName(String lastName) {
         return Pattern.matches(Regex.LAST_NAME_PATTERN, lastName);
     }
+
+    public static boolean validateEmail(String email) {
+        return Pattern.matches(Regex.EMAIL_PATTERN, email);
+    }
 }
