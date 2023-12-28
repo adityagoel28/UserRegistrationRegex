@@ -15,5 +15,9 @@ public class Main {
         System.out.println("Enter Last Name:");
         String lastName = sc.nextLine();
         System.out.println("Last Name Valid: " + Validator.validateLastName(lastName)); // validates last name
+
+        System.out.println("Enter Email:");
+        String email = sc.nextLine();
+        System.out.println("Email Valid: " + Validator.validateEmail(email)); // validates email
     }
 }
