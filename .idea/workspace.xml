@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba1b1333-8c1c-4dae-9400-6d8a5b811d33" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/UserRegistrationRegex/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserRegistrationRegex/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UserRegistrationRegex/Regex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserRegistrationRegex/Regex.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UserRegistrationRegex/Validator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserRegistrationRegex/Validator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/SampleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,9 +35,10 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
+    "JUnit.SampleTest.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "UC__4__Validate__Mobile",
+    "git-widget-placeholder": "UC__9__Test__Email__Samples",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -56,7 +56,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1703775261796</updated>
-      <workItem from="1703775261822" duration="2324000" />
+      <workItem from="1703775261822" duration="3460000" />
     </task>
     <servers />
   </component>
