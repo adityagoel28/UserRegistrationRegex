@@ -14,4 +14,8 @@ public class Validator {
     public static boolean validateEmail(String email) {
         return Pattern.matches(Regex.EMAIL_PATTERN, email);
     }
+
+    public static boolean validateMobile(String mobile) {
+        return Pattern.matches(Regex.MOBILE_PATTERN, mobile); // validates mobile number
+    }
 }
