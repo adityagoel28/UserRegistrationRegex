@@ -1,6 +1,10 @@
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
+import java.util.stream.Stream;
+
 public class SampleTest {
     private final String[] validEmails = {
             "abc@yahoo.com",
@@ -72,5 +76,51 @@ public class SampleTest {
     public void testPasswordValid() {
         assertTrue(UserRegistrationRegex.Validator.validatePassword("Aditya@123"));
         assertFalse(UserRegistrationRegex.Validator.validatePassword("aditya123"));
+    }
+
+    // Valid email addresses
+    private static Stream<String> validEmailProvider() {
+        return Stream.of(
+                "abc@yahoo.com",
+                "abc-100@yahoo.com",
+                "abc.100@yahoo.com",
+                "abc111@abc.com",
+                "abc-100@abc.net",
+                "abc.100@abc.com.au",
+                "abc@1.com",
+                "abc@gmail.com.com",
+                "abc+100@gmail.com"
+        );
+    }
+
+    // Invalid email addresses
+    private static Stream<String> invalidEmailProvider() {
+        return Stream.of(
+                "abc",
+                ".abc@.com.my",
+                "abc123@gmail.a",
+                "abc123@.com",
+                "abc123@.com.com",
+                ".abc@abc.com",
+                "abc()*@gmail.com",
+                "abc@%*.com",
+                "abc..2002@gmail.com",
+                "abc.@gmail.com",
+                "abc@abc@gmail.com",
+                "abc@gmail.com.1a",
+                "abc@gmail.com.aa.au"
+        );
+    }
+
+    @ParameterizedTest
+    @MethodSource("validEmailProvider")
+    public void testValidEmails(String email) {
+        assertTrue(UserRegistrationRegex.Validator.validateEmail(email));
+    }
+
+    @ParameterizedTest
+    @MethodSource("invalidEmailProvider")
+    public void testInvalidEmails(String email) {
+        assertFalse(UserRegistrationRegex.Validator.validateEmail(email));
     }
 }
