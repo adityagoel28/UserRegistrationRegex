@@ -4,28 +4,40 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("User Registration Regex Program!");
-
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Enter First Name:");
-        String firstName = sc.nextLine();
-        System.out.println("First Name Valid: " + Validator.validateFirstName(firstName)); // validates first name
+        try {
+            System.out.println("User Registration Regex Program!");
 
-        System.out.println("Enter Last Name:");
-        String lastName = sc.nextLine();
-        System.out.println("Last Name Valid: " + Validator.validateLastName(lastName)); // validates last name
+            System.out.println("Enter First Name:");
+            String firstName = sc.nextLine();
+            Validator.validateFirstName(firstName);
+            System.out.println("First Name is valid.");
 
-        System.out.println("Enter Email:");
-        String email = sc.nextLine();
-        System.out.println("Email Valid: " + Validator.validateEmail(email)); // validates email
+            System.out.println("Enter Last Name:");
+            String lastName = sc.nextLine();
+            Validator.validateLastName(lastName);
+            System.out.println("Last Name is valid.");
 
-        System.out.println("Enter Mobile Number:");
-        String mobile = sc.nextLine();
-        System.out.println("Mobile Valid: " + Validator.validateMobile(mobile)); // validates mobile number
+            System.out.println("Enter Email:");
+            String email = sc.nextLine();
+            Validator.validateEmail(email);
+            System.out.println("Email is valid.");
 
-        System.out.println("Enter Password:");
-        String password = sc.nextLine();
-        System.out.println("Password Valid: " + Validator.validatePassword(password)); // validates password
+            System.out.println("Enter Mobile Number:");
+            String mobile = sc.nextLine();
+            Validator.validateMobile(mobile);
+            System.out.println("Mobile Number is valid.");
+
+            System.out.println("Enter Password:");
+            String password = sc.nextLine();
+            Validator.validatePassword(password);
+            System.out.println("Password is valid.");
+
+        } catch (UserValidationException e) {
+            System.out.println("Validation Error: " + e.getMessage());
+        } finally {
+            sc.close();
+        }
     }
 }

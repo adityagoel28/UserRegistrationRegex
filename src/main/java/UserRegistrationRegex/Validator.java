@@ -3,23 +3,33 @@ package UserRegistrationRegex;
 import java.util.regex.Pattern;
 
 public class Validator {
-    public static boolean validateFirstName(String firstName) {
-        return Pattern.matches(Regex.FIRST_NAME_PATTERN, firstName);
+    public static void validateFirstName(String firstName) throws UserValidationException {
+        if (!Pattern.matches(Regex.FIRST_NAME_PATTERN, firstName)) {
+            throw new UserValidationException("Invalid First Name");
+        }
     }
 
-    public static boolean validateLastName(String lastName) {
-        return Pattern.matches(Regex.LAST_NAME_PATTERN, lastName);
+    public static void validateLastName(String lastName) throws UserValidationException {
+        if (!Pattern.matches(Regex.LAST_NAME_PATTERN, lastName)) {
+            throw new UserValidationException("Invalid Last Name");
+        }
     }
 
-    public static boolean validateEmail(String email) {
-        return Pattern.matches(Regex.EMAIL_PATTERN, email);
+    public static void validateEmail(String email) throws UserValidationException {
+        if (!Pattern.matches(Regex.EMAIL_PATTERN, email)) {
+            throw new UserValidationException("Invalid Email");
+        }
     }
 
-    public static boolean validateMobile(String mobile) {
-        return Pattern.matches(Regex.MOBILE_PATTERN, mobile); // validates mobile number
+    public static void validateMobile(String mobile) throws UserValidationException {
+        if (!Pattern.matches(Regex.MOBILE_PATTERN, mobile)) {
+            throw new UserValidationException("Invalid Mobile Number");
+        }
     }
 
-    public static boolean validatePassword(String password) {
-        return Pattern.matches(Regex.PASSWORD_PATTERN, password);
+    public static void validatePassword(String password) throws UserValidationException {
+        if (!Pattern.matches(Regex.PASSWORD_PATTERN, password)) {
+            throw new UserValidationException("Invalid Password");
+        }
     }
 }
